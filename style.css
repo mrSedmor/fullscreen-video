@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: pointer;
+}
+
+a:hover {
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-toggle {
+  display: inline-block;
+  height: 40px;
+  min-width: 100px;
+  padding: 8px 24px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  background: #eeeeee;
+}
+
+.backdrop {
+  position: fixed;
+  visibility: visible;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 48px 16px 16px;
+  transition-duration: 400ms;
+  transition-property: opacity;
+  display: flex;
+  place-content: center;
+  background: #00000099;
+}
+
+.backdrop.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+[data-media-player] {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.btn-hide {
+  position: absolute;
+  left: 16px;
+  top: 4px;
+
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-content: center;
+  padding: 0;
+  font-size: 20px;
+  color: #ffffff;
+  background: #000000;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-show {
+  font-size: 32px;
+  font-weight: 700;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 640px;
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 32px 0;
+}
