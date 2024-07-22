@@ -40,7 +40,7 @@ body {
   transition-duration: 400ms;
   transition-property: opacity;
   display: flex;
-  place-content: center;
+  align-items: center;
   background: #00000099;
 }
 
@@ -48,16 +48,25 @@ body {
   opacity: 0;
   visibility: hidden;
 }
-
-[data-media-player] {
+.wrapper {
+  position: relative;
+  height: calc(100vw - 32px);
   max-width: 100%;
   max-height: 100%;
+  margin-inline: auto;
+}
+
+[data-media-player] {
+  height: 100%;
+  width: 100%;
 }
 
 .btn-hide {
   position: absolute;
-  left: 16px;
-  top: 4px;
+  left: 0;
+  top: -4px;
+
+  transform: translateY(-100%);
 
   width: 40px;
   height: 40px;
@@ -69,6 +78,13 @@ body {
   background: #000000;
   border: none;
   border-radius: 8px;
+}
+
+@media screen and (min-width: 599.8px) {
+  .btn-hide {
+    left: auto;
+    right: 0;
+  }
 }
 
 .btn-show {
